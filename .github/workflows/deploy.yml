@@ -39,9 +39,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-     - name: Get build
-       uses: actions/download-artifact@v3
-       with:
+      - name: Get build
+        uses: actions/download-artifact@v3
+        with:
          name: build
          path: build
 
