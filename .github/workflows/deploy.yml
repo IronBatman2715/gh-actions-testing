@@ -1,4 +1,4 @@
-name: "Deploy"
+name: deploy
 
 on:
   # run on page_build to ensure this runs AFTER and therefore OVERRIDES the page-build-deployment action automatically done by github-pages
