@@ -1,4 +1,4 @@
-name: Deploy to Github Pages branch
+name: "Deploy to Github Pages branch"
 
 on:
   push:
@@ -29,30 +29,16 @@ jobs:
         run: npm run build
 
       - name: Artifact build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v0
         with:
-          name: build
           path: build
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Get build
-        uses: actions/download-artifact@v3
-        with:
-         name: build
-         path: build
-
       - name: Deploy to Github pages
-        uses: actions/upload-pages-artifact
-        with:
-          path: build
-
-#      - name: Deploy to "gh-pages" branch
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          branch: gh-pages # The branch the action should deploy to.
-#          folder: build # The folder the action should deploy.
+        id: deployment
+        uses: actions/deploy-pages@v1
