@@ -1,5 +1,7 @@
 # Z-Site
 
+![License](https://github.com/IronBatman2715/gh-actions-testing/LICENSE?branch=main) ![Github Pages Deploy](https://github.com/IronBatman2715/gh-actions-testing/actions/workflows/deploy.yml/badge.svg?branch=main)
+
 **[My personal website](https://ironbatman2715.github.io/) for displaying my works or linking to other relevant sites.**
 
 - A static site generator (SSG) built with [SvelteKit](https://kit.svelte.dev/) and [TypeScript](https://www.typescriptlang.org/)
