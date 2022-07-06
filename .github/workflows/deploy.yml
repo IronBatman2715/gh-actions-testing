@@ -1,18 +1,19 @@
-name: Deploy
+name: "Deploy"
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
+  page_build:
   workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency: ci-${{ github.ref }}
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
