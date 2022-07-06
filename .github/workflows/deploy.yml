@@ -7,13 +7,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+concurrency: ci-${{ github.ref }}
 
 jobs:
   build:
