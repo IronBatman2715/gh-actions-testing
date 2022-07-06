@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-#  pages: write
+  pages: write
   id-token: write
 
 concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
