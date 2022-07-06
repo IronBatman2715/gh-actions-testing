@@ -9,10 +9,10 @@ on:
       - main
 
 concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
-runs-on: ubuntu-latest
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -35,6 +35,7 @@ jobs:
           path: build
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
