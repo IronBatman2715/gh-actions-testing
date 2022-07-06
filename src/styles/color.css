@@ -1,0 +1,41 @@
+:root {
+  /* Defaults */
+  --background: rgba(0, 0, 0, 1); /*black*/
+  --offBackground: rgba(25, 25, 25, 1); /*custom-1*/
+  --inverseBackground: rgba(255, 255, 255, 1); /*white*/
+  --text: rgba(211, 211, 211, 1); /*lightgrey*/
+  --linkText: rgba(80, 150, 210, 1); /*custom-2*/
+  --linkHoverText: rgba(135, 206, 250, 1); /*lightskyblue*/
+
+  /* Constants */
+  --tooltipBackground: rgba(50, 50, 50, 1); /*custom-4*/
+  --tooltipText: rgba(255, 255, 255, 1); /*white*/
+  --navbar: rgba(0, 0, 139, 1); /*darkblue*/
+  --headerText: rgba(80, 150, 210, 1); /*custom-2*/
+  --headerHoverText: rgba(135, 206, 250, 1); /**lightskyblue*/
+  --clear: rgba(0, 0, 0, 0); /*clear*/
+}
+
+/* Light mode*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: rgba(255, 255, 255, 1); /*white*/
+    --offBackground: rgba(230, 230, 230, 1); /*custom*/
+    --inverseBackground: rgba(0, 0, 0, 1); /*black*/
+    --text: rgba(0, 0, 0, 1); /*black*/
+    --linkText: rgba(30, 50, 200, 1); /*custom-5*/
+    --linkHoverText: rgba(60, 110, 200, 1); /*custom-6*/
+  }
+}
+
+/* Dark mode [default]*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgba(0, 0, 0, 1); /*black*/
+    --offBackground: rgba(25, 25, 25, 1); /*custom*/
+    --inverseBackground: rgba(255, 255, 255, 1); /*white*/
+    --text: rgba(211, 211, 211, 1); /*lightgrey*/
+    --linkText: rgba(80, 150, 210, 1); /*custom-2*/
+    --linkHoverText: rgba(135, 206, 250, 1); /*lightskyblue*/
+  }
+}
