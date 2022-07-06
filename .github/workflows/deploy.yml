@@ -1,14 +1,15 @@
 name: "Deploy"
 
 on:
+  # run on page_build to ensure this runs AFTER and therefore OVERRIDES the page-build-deployment action automatically done by github-pages
+  page_build:
+  workflow_dispatch:
 #  push:
 #    branches:
 #      - main
 #  pull_request:
 #    branches:
 #      - main
-  page_build:
-  workflow_dispatch:
 
 permissions:
   contents: read

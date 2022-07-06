@@ -1,7 +1,7 @@
 # Z-Site
 
-[![](https://img.shields.io/github/license/IronBatman2715/gh-actions-testing.svg?branch=main)](https://github.com/IronBatman2715/gh-actions-testing/LICENSE?branch=main)
-![](https://github.com/IronBatman2715/gh-actions-testing/actions/workflows/deploy.yml/badge.svg?branch=main)
+[![](https://img.shields.io/github/license/IronBatman2715/gh-actions-testing.svg?branch=main)](https://github.com/IronBatman2715/gh-actions-testing/blob/main/LICENSE)
+[![](https://github.com/IronBatman2715/gh-actions-testing/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/IronBatman2715/gh-actions-testing/blob/main/.github/workflows/deploy.yml)
 
 **[My personal website](https://ironbatman2715.github.io/) for displaying my works or linking to other relevant sites.**
 
