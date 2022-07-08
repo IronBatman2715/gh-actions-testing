@@ -1,7 +1,12 @@
+# Deploy NodeJS project to GitHub Pages
 name: deploy
 
 on:
-  # run on page_build to ensure this runs AFTER and therefore OVERRIDES the page-build-deployment action automatically done by github-pages
+  # run on page_build to ensure this workflow runs AFTER and therefore
+  # OVERRIDES the page-build-deployment action done by github-pages
+  # 
+  # Need to find a way to disable page-build-deployment in order to
+  # reliably run this workflow on push/pull
   page_build:
   workflow_dispatch:
 #  push:
@@ -31,13 +36,14 @@ jobs:
       - name: Install node packages
         run: npm ci
 
-      - name: Run build command
+      - name: Build website
         run: npm run build
 
-      - name: Artifact build
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v0
         with:
-          path: build
+          path: build # entire build is within this directory
+          retention-days: 7 # retain artifact for a week, for debugging
   deploy:
     needs: build
     runs-on: ubuntu-latest
